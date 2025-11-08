@@ -1,38 +1,53 @@
-Giới thiệu
+# Line-Following Robot
 
-Dự án Xe dò line là một robot tự hành sử dụng cảm biến hồng ngoại để nhận biết đường đi (line) và điều khiển động cơ di chuyển theo vạch kẻ đen/trắng trên nền.
-Mục tiêu của dự án:
+## Overview  
+This project implements an autonomous **line-following robot** using **Arduino UNO** and **5 TCRT5000 infrared sensors**.  
+The robot detects a high-contrast line on the ground and follows it automatically. Ideal for practicing sensor integration, motor control, and feedback loops.
 
-Hiểu cách hoạt động của cảm biến dò line.
+## Hardware Used  
+- **MCU:** Arduino UNO  
+- **Line Sensors:** 5 × TCRT5000 infrared sensors  
+- **Motor Driver:** L298N H-Bridge  
+- **DC Motors + Robot Chassis & Wheels**  
+- **Power Supply:** 12V battery pack   
 
-Thực hành lập trình điều khiển động cơ DC/servo.
+## Software & Tools  
+- **Language:** Arduino C/C++  
+- **IDE:** Arduino IDE  
+- **Algorithm:** Read 5 sensors → Calculate line deviation → Adjust motor speeds  
+- **Motor Control:** PWM + H-Bridge  
 
-Ứng dụng thuật toán đơn giản (if-else, PID) để điều khiển hướng đi.
+## Features 
+- Detect and follow a line automatically  
+- 5-sensor array allows accurate detection of curves and forks  
+- Adjust motor speeds for smooth turning  
+- Stop when line ends (optional)  
+- Expandable: obstacle avoidance, remote control
 
-Phần cứng sử dụng
+## Project Structure 
+```
+Line_following/
+├─ version1.ino # Arduino UNO code version 1 (.ino)
+├─ version2.ino # Arduino UNO code version 2 (.ino)
+└─ README.md # This file
+```
 
-Arduino Uno R3 (hoặc ESP32 / STM32 tuỳ phiên bản)
+## Getting Started
+```bash
+git clone https://github.com/MinhQuocNguyenHoang/Line_following.git
+cd Line_following/firmware
+# Open the sketch in Arduino IDE
+# Select Arduino UNO board, COM port
+# Build & upload
+```
 
-Module cảm biến dò line (TCRTCX5000 sensor)
+## Future Improvements 🚀
+- Implement PID control for smoother line following
+- Add more intelligent fork/turn handling
+- Integrate Bluetooth/WiFi for remote monitoring
+- Encoder-based speed feedback for precision
+- Obstacle avoidance integration
 
-Driver motor (L298N / L293D)
-
-2 động cơ DC + bánh xe
-
-Pin Li-ion hoặc 18650 + mạch sạc bảo vệ
-
-Khung xe robot
-
-Phần mềm
-
-Arduino IDE (C/C++)
-
-Cách lắp ráp
-
-Kết nối cảm biến dò line vào Arduino (chân digital).
-
-Kết nối động cơ qua driver L298N.
-
-Nguồn pin cấp cho cả mạch Arduino và động cơ.
-
-Upload code từ Arduino IDE.
+## Author
+Nguyễn Hoàng Minh Quốc
+GitHub: @MinhQuocNguyenHoang
