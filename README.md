@@ -41,7 +41,7 @@ cd Line_following/firmware
 # Build & upload
 ```
 
-## Future Improvements 🚀
+## Future Improvements
 - Implement PID control for smoother line following
 - Add more intelligent fork/turn handling
 - Integrate Bluetooth/WiFi for remote monitoring
@@ -49,5 +49,5 @@ cd Line_following/firmware
 - Obstacle avoidance integration
 
 ## Author
-Nguyễn Hoàng Minh Quốc
+Nguyễn Hoàng Minh Quốc<br>
 GitHub: @MinhQuocNguyenHoang
